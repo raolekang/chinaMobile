@@ -22,9 +22,9 @@ class Testtesting:
     #     self.driver.quit()
 
     #登录EC/OS
-    @pytest.mark.parametrize("data",ReadYaml().readYamlFile(file=os.getcwd()[:os.getcwd().find("testing")]+r'testing\data\data.yaml'))
+    @pytest.mark.parametrize("data",ReadYaml().readYamlFile(file=os.getcwd()[:os.getcwd().find("testing")]+r'\testing\data\data.yaml'))
     def test_login(self,data,manage_brower):
-        print("登录时读取配置文件路径：",os.getcwd()[:os.getcwd().find("testing")]+r'testing\data\data.yaml')
+        print("登录时读取配置文件路径：",os.getcwd()[:os.getcwd().find("testing")]+r'\testing\data\data.yaml')
         self.loginPage = Login(driver=manage_brower)
         self.loginPage.login(ecUrl=data["ecUrl"],ecUserName=data["ecAccount"], ecPassWord=data["ecPwd"],osUrl=data["osUrl"], osUserName=data["osAccount"], osPassWord=data["osPwd"])
         assert  "cszh0120" in self.loginPage.getAssertValue()
