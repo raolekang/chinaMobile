@@ -1,0 +1,13 @@
+使用pytest框架
+包名 test 开头
+用例文件名  test 开头
+类名  test 开头
+测试用例名 test 开头
+不能有 init 方法
+
+生产：userName="15018075768", passWord="Mw123456"
+
+print("会获取标签之间的文本内容",ele.get_attribute('textContent'))
+print("会获取标签之间的完整 html",ele.get_attribute('innerHTML'))
+print("获取当前标签的完整 html",ele.get_attribute('outerHTML'))
+print("便签中无其他标签，调用text属性",self.driver.find_element(By.XPATH,'//span[@class="muen2"]').text)
